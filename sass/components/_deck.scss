@@ -1,0 +1,28 @@
+// Configura el layout en el que se agregarán las cards de naves y pasajeros
+// Layout en formato de cuadrícula que cambiará de número de columnas según tamaño de pantalla
+.deck {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin: 2rem 4rem;
+
+    @media (max-width: $xl) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: $lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $sm) {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+    
+   

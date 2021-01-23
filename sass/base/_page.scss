@@ -1,0 +1,50 @@
+// Constantes de tamaños de pantalla
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// Colors
+$color-primary: #fff;
+$color-secondary: rgb(247, 236, 18);
+$color-dark: #282727;
+$color-light: #BABDB6;
+
+// Fonts
+@font-face {
+    font-family: "starJedi";
+    src: url("../res/Starjedi.ttf");
+}
+$font-orbitron: 'Orbitron', sans-serif;
+$font-lato: 'Lato', sans-serif;
+
+// Use full space
+%fullSpace {
+    width: 100%;
+    height: 100%;
+}
+
+// Display none 
+// Honorable trashmaster
+.d-none {
+    display: none !important;
+}
+
+// Page format 
+:root {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    box-sizing: border-box; 
+    background: url('../img/space.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

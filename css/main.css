@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "starJedi";
+  src: url("../res/Starjedi.ttf"); }
+
+.card-body-overlay {
+  width: 100%;
+  height: 100%; }
+
+.d-none {
+  display: none !important; }
+
+:root {
+  box-sizing: inherit; }
+
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: url("../img/space.jpg") center no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.navbar {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8); }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap;
+      justify-content: center; } }
+  .navbar-brand {
+    font-family: starJedi;
+    font-size: 1.5rem;
+    color: #f7ec12;
+    text-decoration: none;
+    text-align: center;
+    margin: .5rem 2rem; }
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .navbar-menu-item {
+      margin: 1rem 1rem; }
+      .navbar-menu-item a {
+        font-size: 1rem;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: .3rem; }
+        .navbar-menu-item a:hover {
+          box-shadow: 0 8px 6px -6px #f7ec12;
+          transition: all .2s linear; }
+  .navbar-search {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 2rem 0 auto; }
+    @media (max-width: 768px) {
+      .navbar-search {
+        margin: 1rem 0; } }
+    .navbar-search-data {
+      height: 30px;
+      width: 200px;
+      border: none;
+      border-radius: 2px 0 0 2px;
+      background-color: #282727;
+      color: white;
+      font-size: 1rem;
+      font-family: "Lato", sans-serif;
+      outline: none; }
+    .navbar-search button {
+      height: 30px;
+      background-color: #282727;
+      color: #BABDB6;
+      border-radius: 0 2px 2px 0;
+      border: none;
+      cursor: pointer;
+      outline: none; }
+
+.card {
+  border: none;
+  color: white;
+  background-color: rgba(40, 39, 39, 0.9);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #BABDB6; }
+  @media (max-width: 576px) {
+    .card {
+      margin: 0 auto;
+      width: 70%; } }
+  .card-body {
+    position: relative;
+    overflow: hidden; }
+    .card-body-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.2rem;
+      margin: 1rem; }
+    .card-body-img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto; }
+    .card-body-imgPassenger {
+      display: block;
+      height: 200px;
+      width: 100px;
+      margin: 0 auto; }
+    .card-body-text {
+      margin: 1rem;
+      font-family: "Lato", sans-serif;
+      font-size: 1rem; }
+      .card-body-text span {
+        text-transform: uppercase; }
+    .card-body-overlay {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 10;
+      transition: left 0.7s;
+      border-radius: 10px 10px 0 0;
+      box-shadow: inset 0 0 5px #BABDB6; }
+      .card-body-overlay p {
+        font-family: "Lato", sans-serif;
+        font-size: .8rem;
+        margin: .8rem 1rem; }
+        .card-body-overlay p span {
+          text-transform: uppercase; }
+    .card-body:hover .card-body-overlay {
+      left: 0; }
+  .card-footer {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .card-footer-fav {
+      outline: none;
+      background: transparent;
+      border: none;
+      height: 100%;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer; }
+      .card-footer-fav:hover {
+        text-shadow: 0 0 10px #f7ec12; }
+    .card-footer-inspect {
+      outline: none;
+      background: transparent;
+      margin-left: 5rem;
+      border: none;
+      height: 100%;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer; }
+      .card-footer-inspect:hover {
+        text-shadow: 0 0 10px #9AFF4CFF; }
+    .card-footer-add {
+      outline: none;
+      background: transparent;
+      border: none;
+      height: 100%;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer; }
+      .card-footer-add:hover {
+        text-shadow: 0 0 10px aqua; }
+  .card .toggle-on-favs {
+    color: #f7ec12; }
+  .card .toggle-off {
+    color: white; }
+  .card .toggle-on-add {
+    color: aquamarine; }
+
+.deck {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin: 2rem 4rem; }
+  @media (max-width: 1200px) {
+    .deck {
+      grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 992px) {
+    .deck {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) {
+    .deck {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 576px) {
+    .deck {
+      grid-template-columns: repeat(1, 1fr); } }
+
+.header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3rem; }
+  .header-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px; }
+  .header .close-search {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    width: 3rem;
+    border: 1.5px solid white;
+    background-color: #A40000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer; }
+    .header .close-search:hover {
+      background-color: white;
+      color: #A40000; }
+  .header nav {
+    margin-right: 1rem;
+    white-space: nowrap; }
+    .header nav .page-item {
+      display: inline-block;
+      margin: .3rem; }
+      .header nav .page-item a {
+        color: white;
+        font-size: 1.5rem;
+        border: 1.5px solid white;
+        padding: .5rem;
+        border-radius: 5px;
+        background-color: black; }
+        .header nav .page-item a:hover {
+          background-color: white;
+          color: black; }

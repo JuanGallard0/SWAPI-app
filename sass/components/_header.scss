@@ -1,0 +1,55 @@
+// Configura el formato del encabezado de todas las secciones en las que se despliegan las cards
+.header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 3rem;
+
+    &-title {
+        font-family: $font-orbitron;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .close-search {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        width: 3rem;
+        border: 1.5px solid white;
+        background-color: #A40000;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: white;
+            color: #A40000;
+        }
+    }
+
+    nav {
+        margin-right: 1rem;
+        white-space: nowrap;
+
+        .page-item {
+            display: inline-block;
+            margin: .3rem;
+            
+            a {
+                color: white;
+                font-size: 1.5rem;
+                border: 1.5px solid white;
+                padding: .5rem;
+                border-radius: 5px;
+                background-color: black;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}

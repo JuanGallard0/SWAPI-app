@@ -1,0 +1,77 @@
+// Configura el formato de la barra de navegación y sus componentes
+.navbar {
+    display: flex;
+    background-color: rgba(0,0,0, .8);
+
+    @media (max-width: $md) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &-brand {
+        font-family: starJedi;
+        font-size: 1.5rem;
+        color: $color-secondary;
+        text-decoration: none;
+        text-align: center;
+        margin: .5rem 2rem;
+    }
+
+    &-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        &-item {
+            margin: 1rem 1rem;
+
+            a {
+                font-size: 1rem;
+                font-family: $font-orbitron;
+                font-weight: 700;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                padding-bottom: .3rem;
+
+                &:hover {
+                    box-shadow: 0 8px 6px -6px $color-secondary;
+                    transition: all .2s linear;
+                }
+            }
+        }
+    }
+
+    &-search {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0 2rem 0 auto;
+
+        @media (max-width: $md) {
+            margin: 1rem 0;
+        }
+
+        &-data {
+            height: 30px;
+            width: 200px;
+            border: none;
+            border-radius: 2px 0 0 2px;
+            background-color: $color-dark;
+            color: white;
+            font-size: 1rem;
+            font-family: $font-lato;
+            outline: none;
+        }
+
+        button {
+            height: 30px;
+            background-color: $color-dark;
+            color: $color-light;
+            border-radius: 0 2px 2px 0;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}

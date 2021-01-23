@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/f69840e9f8.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Title -->
+    <title>Star Wars Manager</title>
+    <link rel="icon" href="img/ships/falcon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Start of Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand">
+            <h1>Star Wars<br>Manager</h1>
+        </a>
+
+        <ul class="navbar-menu">
+            <li class="navbar-menu-item">
+                <a onclick="showStarships()" href="javascript:void(0);">Discover</a>
+            </li>
+            <li class="navbar-menu-item">
+                <a onclick="showFavs()" href="javascript:void(0);">Favorites</a>
+            </li>
+        </ul>
+        
+        <form action="#" name="search" class="navbar-search">
+            <input type="search" class="navbar-search-data" placeholder="Search" aria-label="search">
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+        
+    </nav>
+    <!-- End of Navbar -->
+    <!-- Start of Search Result -->
+    <section id="search" class="d-none">
+        <div class="container">
+            <header class="header">
+                <h2 class="header-title"><i class="fas fa-search"></i> Search Result</h2>
+
+                <button class="close-search"><i class="fas fa-times"></i></button>
+            </header>
+
+            <div class="deck search-result">
+            </div>
+        </div>
+    </section>
+    <!-- End of Search Result -->
+    <!-- Start of Discover-->
+    <section id="starships">
+        <div class="container">
+            <header class="header">
+                <h2 class="header-title"><i class="fab fa-galactic-senate"></i> Starships</h2>
+
+                <nav class="nav">
+                    <ul class="nav-pagination">
+                        <li class="page-item"><a class="page-link starships-previous" href="#"><i
+                                    class="fas fa-arrow-left"></i></a></li>
+                        <li class="page-item"><a class="page-link starships-next" href="#"><i
+                                    class="fas fa-arrow-right"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="deck discover-result">
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Discover -->
+    <!-- Start of Favorites -->
+    <section id="favs" class="d-none">
+        <div class="container">
+            <header class="header">
+                <h2 class="header-title"><i class="fas fa-star"></i> Favorites</h2>
+            </header>
+
+            <div class="deck favs-result">
+            </div>
+        </div>
+    </section>
+    <!-- End of Favorites -->
+    <!-- Start of Character -->
+    <section id="passengers" class="d-none">
+        <div class="container">
+            <header class="header">
+                <h2 class="header-title"><i class="fas fa-user-astronaut"></i> Pick <span id="boardingShip">starship's</span> passengers</h2>
+
+                <nav class="nav">
+                    <ul class="nav-pagination">
+                        <li class="page-item"><a class="page-link passengers-previous" href="#"><i
+                                    class="fas fa-arrow-left"></i></a></li>
+                        <li class="page-item"><a class="page-link passengers-next" href="#"><i
+                                    class="fas fa-arrow-right"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="deck passengers-result">
+            </div>
+        </div>
+    </section>
+    <!-- End of Character -->
+    <!--Start of FavPassengers-->
+    <section id="fav-passengers" class="d-none">
+        <div class="container">
+            <header class="header">
+                <h2 class="header-title"><i class="fas fa-user-astronaut"></i> Passengers on the ship</h2>
+            </header>
+
+            <div class="deck fav-passengers-result">
+            </div>
+        </div>
+    </section>
+    <!-- End of FavPassengers -->
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
